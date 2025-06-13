@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4wc80k7uc37c"]
+
+[ext_resource type="Texture2D" uid="uid://djipx6r5lhqmv" path="res://Sprite/Background/Background.png" id="1_21rx5"]
+[ext_resource type="Texture2D" uid="uid://4tjiga5g4jg2" path="res://Sprite/Marcos/FlameDemon Evolved.png" id="2_3ujke"]
+[ext_resource type="Texture2D" uid="uid://c7gdv06ktt242" path="res://Sprite/Marcos/Civilian_card_version3.png" id="3_wi8ie"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r0du0"]
+size = Vector2(191, 279)
+
+[node name="Card" type="Node2D"]
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_21rx5")
+
+[node name="Imagen" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1.14, -63.04)
+scale = Vector2(2.24, 2.24)
+texture = ExtResource("2_3ujke")
+
+[node name="Marco" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("3_wi8ie")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_r0du0")
