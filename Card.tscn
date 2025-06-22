@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://c4wc80k7uc37c"]
+[gd_scene load_steps=6 format=3 uid="uid://c4wc80k7uc37c"]
 
+[ext_resource type="Script" uid="uid://eligg5powv5j" path="res://Card.gd" id="1_3ujke"]
 [ext_resource type="Texture2D" uid="uid://djipx6r5lhqmv" path="res://Sprite/Background/Background.png" id="1_21rx5"]
 [ext_resource type="Texture2D" uid="uid://4tjiga5g4jg2" path="res://Sprite/Marcos/FlameDemon Evolved.png" id="2_3ujke"]
 [ext_resource type="Texture2D" uid="uid://c7gdv06ktt242" path="res://Sprite/Marcos/Civilian_card_version3.png" id="3_wi8ie"]
@@ -8,6 +9,7 @@
 size = Vector2(191, 279)
 
 [node name="Card" type="Node2D"]
+script = ExtResource("1_3ujke")
 
 [node name="Fondo" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -28,3 +30,6 @@ texture = ExtResource("3_wi8ie")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-0.5, 0.5)
 shape = SubResource("RectangleShape2D_r0du0")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
